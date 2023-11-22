@@ -1,10 +1,152 @@
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Inicio</title>
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+    <meta charset="UTF-8">
+    <title>Tooltip</title>
+    <style>
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 150px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            top: 125%;
+            left: 50%;
+            margin-left: -75px;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        .pagination {
+            display: inline-block
+        }
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration:  none;
+            transition: background-color .3s;
+            border: 1px solid #ddd;
+        }
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+            border: 1px solid #4CAF50;
+        }
+        .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+        .pagination1 {
+            display: inline-block
+        }
+        .pagination1 a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration:  none;
+            transition: background-color .3s;
+            border: 1px solid #4CAF50;
+            background-color: #97c999;
+        }
+        .pagination1 a.active {
+            background-color: #7db17f;
+            color: white;
+            border: 1px solid #58e25d;
+
+        }
+        .pagination1 a:hover:not(.active) {
+            background-color: #4CAF50;
+        }
+        .pagination2 {
+            display: inline-block
+        }
+        .pagination2 a {
+            color: black;
+            float: left;
+            padding: 8px 30px;
+            text-decoration:  none;
+            transition: background-color .3s;
+            border: 1px solid #4CAF50;
+            background-color: #97c999;
+        }
+        .pagination2 a.active {
+            background-color: #7db17f;
+            color: white;
+            border: 1px solid #58e25d;
+
+        }
+        .pagination2 a:hover:not(.active) {
+            background-color: #4CAF50;
+        }
+        .button{
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 30px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Index HTML</h1>
-</body>
+    <h1>Tooltips</h1>
+    <div class="tooltip">
+        Hover sobre mí
+        <span class="tooltiptext">Este es un tooltip de ejemplo.</span>
+    </div>
+    <br>
+    <h1>Paginación</h1>
+    <div class="pagination">
+        <a href="#">$laquo;</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">$raquo;</a>
+    </div>
+    <br>
+    <h1>Paginación 2</h1>
+    <div class="pagination1">
+        <a href="#">$laquo;</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">$raquo;</a>
+    </div>
+    <br>
+    <h1>Paginación 3</h1>
+    <div class="pagination2">
+        <a href="#">$laquo;</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">$raquo;</a>
+    </div>
+    <br>
+    <br>
+    <button> BOTON normal</button>
+    <a hreft="#" class="button">Boton link</a>
+    <input class="button" value="Botón que deja ingresar">
 </html>
