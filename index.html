@@ -1,155 +1,205 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Tooltip</title>
-    <style>
-        .tooltip {
-            position: relative;
-            display: inline-block;
-            cursor: pointer;
-        }
+<link rel="icon" href="assets/images/logo.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        .tooltip .tooltiptext {
-            visibility: hidden;
-            width: 150px;
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            border-radius: 6px;
-            padding: 5px;
-            position: absolute;
-            z-index: 1;
-            top: 125%;
-            left: 50%;
-            margin-left: -75px;
-            opacity: 0;
-            transition: opacity 0.2s;
-        }
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
-        .tooltip:hover .tooltiptext {
-            visibility: visible;
-            opacity: 1;
-        }
-        .pagination {
-            display: inline-block
-        }
-        .pagination a {
-            color: black;
-            float: left;
-            padding: 8px 16px;
-            text-decoration:  none;
-            transition: background-color .3s;
-            border: 1px solid #ddd;
-        }
-        .pagination a.active {
-            background-color: #4CAF50;
-            color: white;
-            border: 1px solid #4CAF50;
-        }
-        .pagination a:hover:not(.active) {
-            background-color: #ddd;
-        }
-        .pagination1 {
-            display: inline-block
-        }
-        .pagination1 a {
-            color: black;
-            float: left;
-            padding: 8px 16px;
-            text-decoration:  none;
-            transition: background-color .3s;
-            border: 1px solid #4CAF50;
-            background-color: #97c999;
-        }
-        .pagination1 a.active {
-            background-color: #7db17f;
-            color: white;
-            border: 1px solid #58e25d;
+  <title>FALLEN GRACE</title>
 
-        }
-        .pagination1 a:hover:not(.active) {
-            background-color: #4CAF50;
-        }
-        .pagination2 {
-            display: inline-block
-        }
-        .pagination2 a {
-            color: black;
-            float: left;
-            padding: 8px 30px;
-            text-decoration:  none;
-            transition: background-color .3s;
-            border: 1px solid #4CAF50;
-            background-color: #97c999;
-        }
-        .pagination2 a.active {
-            background-color: #7db17f;
-            color: white;
-            border: 1px solid #58e25d;
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-        }
-        .pagination2 a:hover:not(.active) {
-            background-color: #4CAF50;
-        }
-        .button{
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 30px;
-        }
-    </style>
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-tale-seo-agency.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <!--
+
+TemplateMo 582 Tale SEO Agency
+
+https://templatemo.com/tm-582-tale-seo-agency
+
+-->
 </head>
+
 <body>
-    <h1>Tooltips</h1>
-    <div class="tooltip">
-        Hover sobre mí
-        <span class="tooltiptext">Este es un tooltip de ejemplo.</span>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
-    <br>
-    <h1>Paginación</h1>
-    <div class="pagination">
-        <a href="#">$laquo;</a>
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">4</a>
-        <a href="#">$raquo;</a>
-    </div>
-    <br>
-    <h1>Paginación 2</h1>
-    <div class="pagination1">
-        <a href="#">$laquo;</a>
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">4</a>
-        <a href="#">$raquo;</a>
-    </div>
-    <br>
-    <h1>Paginación 3</h1>
-    <div class="pagination2">
-        <a href="#">$laquo;</a>
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">4</a>
-        <a href="#">$raquo;</a>
-    </div>
-    <br>
-    <br>
-    <button> BOTON normal</button>
-    <a hreft="#" class="button">Boton link</a>
-    <input class="button" value="Botón que deja ingresar">
+  </div>
+  <!-- ***** Preloader End ***** -->
 
 
-    <h1>CUALQUIER TITULO</h1>
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky" style="height: 90px ;">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <img src="assets/images/logo.png" alt="">
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"></li>
+              <li class="scroll-to-section"><a href="index.html" >Home</a></li>
+              <li class="scroll-to-section"><a href="index.html #Controles" >Controles</a></li>
+              <li class="scroll-to-section"><a href="about.html" >Info</a></li>
+
+              
+              
+            </ul>
+            <a class='menu-trigger'>
+              <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="main-banner" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="caption header-text">
+            <h6>Horror game</h6>
+            <div class="line-dec"></div>
+            <h4><em>Fallen Grace</em> its a<span>Horror</span> Game</h4>
+            <p>Centered around weapon and item management, where direct atack your enemies is never a good idea</p>
+            <div class="main-button scroll-to-section"><a href="#services">Info</a></div>
+            
+            <div class="second-button"><a href="faqs.html">download</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="section-heading" style="margin-top: 120px;" id="Controles">
+      <h2><em>Game</em> <span>Control</span> 
+      </h2>
+      <div class="line-dec"></div>
+    
+    </div>
+
+
+  
+<div style="background-image: url(assets/images/services-left.jpg); height: 500px; width: 100%;  background-size: 100% 100%;background-repeat: no-repeat">
+  <div class="row">
+    <div class="col-lg-6 offset-lg-6">
+      <div class="row" style="margin-top: 85px;">
+      
+        <div class="col-lg-6 col-sm-6">
+          <div class="service-item">
+            <div class="icon">
+              <img src="assets/images/control.png" alt="discover SEO" class="templatemo-feature">
+            </div>
+            <h4>Press arrows to move</h4>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-6">
+          <div class="service-item">
+            <div class="icon">
+              <img src="assets/images/puño.png" alt="data analysis" class="templatemo-feature">
+            </div>
+            <h4>press "d" to atack</h4>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-6">
+          <div class="service-item">
+            <div class="icon">
+              <img src="assets/images/corriendo.png" alt="precise data" class="templatemo-feature">
+            </div>
+            <h4>Press "SHIFT" to run </h4>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-6">
+          <div class="service-item">
+            <div class="icon">
+              <img src="assets/images/cazador-de-zombies.png" alt="SEO marketing" class="templatemo-feature">
+            </div>
+            <h4>Press "SPACE" to pick up objects</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+  
+
+  <div class="pre-header" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-sm-9">
+          <div class="left-info">
+            <ul>
+              <li><a href="#"><i class="fa fa-phone"></i>+51 8129333229</a></li>
+              <li><a href="#"><i class="fa fa-envelope"></i>ruben.rubio.gdo@gmail,com</a></li>
+              <li><a href="#"><i class="fa fa-map-marker"></i>Santa Catarina, NL</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-3">
+          <div class="social-icons">
+            <ul>
+              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+      <!-- ***** Pre-Header Area Start ***** -->
+
+    <div class="container">
+      <div class="col-lg-12">
+        <p><a href="#">TexaTech INC.</a>
+
+          <br>Design: <a href="https://templatemo.com" target="_blank">Videogames, apps & Websites</a> 
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+
+</body>
+
 </html>
